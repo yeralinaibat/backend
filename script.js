@@ -44,6 +44,6 @@ async function main() {
 }
 main().catch((err) => console.log(err));
 
-app.listen(5000, () => {
-  console.log("server started on port 5000");
+app.listen(process.env.PORT || 5000, () => {
+  console.log(`server started on port ${process.env.PORT || 5000}`);
 });
