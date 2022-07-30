@@ -40,7 +40,7 @@ class testController {
   async getCategories(req, res) {
     try {
       const tests = await Test.find();
-      const categories = await new Set(tests.map((test) => test.category));
+      const categories = new Set(tests.map((test) => test.category));
       let unique = [];
       for (let category of categories.values()) {
         unique.push({
